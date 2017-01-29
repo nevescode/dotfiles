@@ -25,7 +25,7 @@ alias gcm='git checkout master'
 alias vai='git push'
 alias vem='git pull --rebase'
 alias gc='git commit -m '
-alias jogafora='git stash save --keep-index && git stash drop'
+alias jogafora='git stash save --keep-index; git stash drop'
 alias ajeita='git rebase master'
 
 # NPM
@@ -39,30 +39,6 @@ alias flushdns='sudo killall -HUP mDNSResponder'
 
 # Hosts
 alias hosts='code /etc/hosts'
-
-# XCODE
-clear_xcode() {
-    #Save the starting dir
-    startingDir=$PWD
-
-    #Go to the derivedData
-    cd ~/Library/Developer/Xcode/DerivedData
-
-    #Sometimes, 1 file remains, so loop until no files remain
-    numRemainingFiles=1
-    while [ $numRemainingFiles -gt 0 ]; do
-        #Delete the files, recursively
-        rm -rf *
-
-        #Update file count
-        numRemainingFiles=`ls | wc -l`
-    done
-
-    echo Done
-
-    #Go back to starting dir
-    cd $startingDir
-}
 
 ### nevescode/dotfiles
 " >> ~/.config/fish/config.fish

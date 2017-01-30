@@ -24,4 +24,5 @@ airserver \
 virtualbox \
 postman \
 android-studio \
-caffeine
+caffeine \
+font-hack-nerd-font

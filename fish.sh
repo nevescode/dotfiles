@@ -20,6 +20,7 @@ alias ....='cd ....'
 
 # Git
 alias gs='git status'
+alias gd='git diff'
 alias ga='git add . --all'
 alias gcm='git checkout master'
 alias vai='git push'
@@ -40,6 +41,11 @@ alias flushdns='sudo killall -HUP mDNSResponder'
 # Hosts
 alias hosts='code /etc/hosts'
 
+set -g theme_nerd_fonts yes
+set -g theme_title_use_abbreviated_path no
+set -g theme_color_scheme base16
+set -g theme_display_date no
+
 ### nevescode/dotfiles
 " >> ~/.config/fish/config.fish
 
@@ -47,6 +53,11 @@ echo ">>>"
 echo ">>> Installing fisherman"
 echo ">>>"
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+
+echo ">>>"
+echo ">>> Installing bobthefish"
+echo ">>>"
+fisher omf/theme-bobthefish
 
 echo ">>>"
 echo ">>> Installing vtex-fish"

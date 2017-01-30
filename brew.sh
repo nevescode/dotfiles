@@ -18,4 +18,5 @@ python \
 ffmpeg \
 wget \
 go \
-thefuck
+thefuck \
+mas 

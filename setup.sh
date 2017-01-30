@@ -10,6 +10,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ./defaults.sh
 ./brew.sh
 ./brew-cask.sh
+./mas.sh
 ./git.sh
 ./npm.sh
 ./fish.sh

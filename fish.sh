@@ -43,8 +43,8 @@ alias hosts='code /etc/hosts'
 
 set -g theme_nerd_fonts yes
 set -g theme_title_use_abbreviated_path no
-set -g theme_color_scheme base16
 set -g theme_display_date no
+set -g theme_color_scheme dark
 
 ### nevescode/dotfiles
 " >> ~/.config/fish/config.fish
@@ -60,7 +60,7 @@ echo ">>>"
 fisher omf/theme-bobthefish
 
 echo ">>>"
-echo ">>> Installing bobthefish"
+echo ">>> Installing thefuck"
 echo ">>>"
 fisher omf/thefuck
 

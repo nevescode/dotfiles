@@ -60,6 +60,11 @@ echo ">>>"
 fisher omf/theme-bobthefish
 
 echo ">>>"
+echo ">>> Installing bobthefish"
+echo ">>>"
+fisher omf/thefuck
+
+echo ">>>"
 echo ">>> Installing vtex-fish"
 echo ">>>"
 fisher vtex/vtex-fish

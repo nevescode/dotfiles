@@ -17,4 +17,5 @@ nodejs \
 python \
 ffmpeg \
 wget \
-go
+go \
+thefuck

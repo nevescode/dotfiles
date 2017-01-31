@@ -19,4 +19,5 @@ ffmpeg \
 wget \
 go \
 thefuck \
-mas 
+mas \
+watchman

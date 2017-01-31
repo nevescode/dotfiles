@@ -25,4 +25,5 @@ virtualbox \
 postman \
 android-studio \
 caffeine \
-font-hack-nerd-font
+font-hack-nerd-font \
+charles

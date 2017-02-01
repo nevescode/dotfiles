@@ -14,6 +14,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ./git.sh
 ./npm.sh
 ./fish.sh
+./others.sh
 
 echo ">>>"
 echo ">>> Finished setup. Cheers!"

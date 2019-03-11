@@ -1,82 +1,29 @@
 #!/usr/bin/env bash
 
-echo ">>>"
-echo ">>> Setup fish"
-echo ">>>"
+echo ">>>>>>>>>> init fish setup <<<<<<<<<<"
 
+# fish functions
 mkdir -p $HOME/.config/fish/functions/
-echo "
-### nevescode/dotfiles
 
-set -x NODE_ENV development
-set PATH (yarn global bin) \$PATH
+# fish config
+cp ./config.fish ~/.config/fish/config.fish 
 
-# FileSystem
-alias wp='cd ~/workspace'
-alias ll='ls -alG'
-alias ..='cd ..'
-alias ...='cd ...'
-alias ....='cd ....'
+# omf
+curl -L https://get.oh-my.fish | fish
+omf install bobthefish
 
-# Git
-alias gs='git status'
-alias gd='git diff'
-alias ga='git add . --all'
-alias gcm='git checkout master'
-alias vai='git push'
-alias vem='git pull --rebase'
-alias gc='git commit -m '
-alias jogafora='git stash save --keep-index; git stash drop'
-alias ajeita='git rebase master'
+# powerline
+pip3 install powerline-status
 
-# NPM
-alias liga='npm start'
+# fonts
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+# set "Hack Nerd Font" as hyper font manually
 
-# VTEX
-alias locksmith='py ~/workspace/locksmith/locksmith/main.py'
-
-# System
-alias flushdns='sudo killall -HUP mDNSResponder'
-
-# Hosts
-alias hosts='code /etc/hosts'
-
-set -g theme_nerd_fonts yes
-set -g theme_title_use_abbreviated_path no
-set -g theme_display_date no
-set -g theme_color_scheme dark
-
-### nevescode/dotfiles
-" >> ~/.config/fish/config.fish
-
-echo ">>>"
-echo ">>> Installing fisherman"
-echo ">>>"
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
-
-echo ">>>"
-echo ">>> Installing bobthefish"
-echo ">>>"
-fisher omf/theme-bobthefish
-
-echo ">>>"
-echo ">>> Installing thefuck"
-echo ">>>"
-fisher omf/thefuck
-
-echo ">>>"
-echo ">>> Installing vtex-fish"
-echo ">>>"
-fisher vtex/vtex-fish
-
-echo ">>>"
-echo ">>> Copy fish_prompt"
-echo ">>>"
-cp ../setup/fish_prompt.fish $HOME/.config/fish/functions/fish_prompt.fish
-
+# Add fish binaries to etc/shells
 sudo bash -c 'echo "/usr/local/bin/fish" >> /etc/shells'
+
+# Configure fish as default terminal
 chsh -s /usr/local/bin/fish
 
-echo ">>>"
-echo ">>> Configured fish as default terminal."
-echo ">>>"
+echo ">>>>>>>>>> end fish setup <<<<<<<<<<"

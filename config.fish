@@ -6,6 +6,7 @@ set -x NODE_ENV development
 # FileSystem
 alias wp='cd ~/workspace'
 alias voa='cd ~/workspace/voa'
+alias dotfiles='cd ~/workspace/utils/dotfiles'
 alias ll='ls -alG'
 alias ..='cd ..'
 alias ...='cd ...'
@@ -37,11 +38,19 @@ set -g theme_title_use_abbreviated_path no
 set -g theme_display_date no
 set -g theme_color_scheme dark
 
+alias dotfiles-refresh='cp ~/workspace/utils/dotfiles/config.fish ~/.config/fish/config.fish ;; source ~/.config/fish/config.fish'
+
 function nvm
    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
 end
 
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
+
+function fish_greeting
+  set_color $fish_color_autosuggestion
+  echo "The light inside has broken but I still work"
+  set_color normal
+end
 
 ### nevescode/dotfiles

@@ -4,9 +4,9 @@ set -x NODE_ENV development
 # set PATH (yarn global bin) \$PATH
 
 # FileSystem
-alias wp='cd ~/workspace'
-alias voa='cd ~/workspace/voa'
-alias dotfiles='cd ~/workspace/utils/dotfiles'
+alias wp='cd ~/workspace ;; ll'
+alias voa='cd ~/workspace/voa ;; ll'
+alias dotfiles='cd ~/workspace/utils/dotfiles ;; ll'
 alias ll='ls -alG'
 alias ..='cd ..'
 alias ...='cd ...'
@@ -24,8 +24,11 @@ alias gc='git commit -m '
 alias jogafora='git stash save --keep-index; git stash drop'
 alias ajeita='git rebase master'
 
+# CODE 
+alias abre='code .'
+
 # NPM
-alias liga='npm start'
+alias liga='yarn start'
 
 # System
 alias flushdns='sudo killall -HUP mDNSResponder'

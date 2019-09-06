@@ -6,7 +6,8 @@ set -x NODE_ENV development
 # FileSystem
 alias wp='cd ~/workspace ;; ll'
 alias voa='cd ~/workspace/voa ;; ll'
-alias dotfiles='cd ~/workspace/utils/dotfiles ;; ll'
+alias dotfiles='cd ~/workspace/nevescode/dotfiles ;; ll'
+alias zecapoderoso='cd /Volumes/GoogleDrive/My\ Drive/nevescode/zecapoderoso/ ;; ll'
 alias ll='ls -alG'
 alias ..='cd ..'
 alias ...='cd ...'
@@ -41,7 +42,7 @@ set -g theme_title_use_abbreviated_path no
 set -g theme_display_date no
 set -g theme_color_scheme dark
 
-alias dotfiles-refresh='cp ~/workspace/utils/dotfiles/config.fish ~/.config/fish/config.fish ;; source ~/.config/fish/config.fish'
+alias dotfiles-refresh='cp ~/workspace/nevescode/dotfiles/config.fish ~/.config/fish/config.fish ;; source ~/.config/fish/config.fish'
 
 function nvm
    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
